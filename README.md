@@ -89,3 +89,27 @@ python3 脚本/LKPV2-decrypt.py <encrypted.csk> <output.md>
 ## 📜 License
 
 Internal use only.
+
+## 🚀 不落盘解密 (Remote Decrypt)
+
+`脚本/lkpv2-remote.py` 提供**密钥不落盘**的解密模式：
+
+```bash
+# 密钥从 GitHub 远程拉取, 仅在内存中使用
+python3 脚本/lkpv2-remote.py encrypted.csk output.md
+
+# 批量解密目录 (明文可选落盘)
+python3 脚本/lkpv2-remote.py encrypted_dir/ [output_dir/]
+```
+
+**特点**：
+- ✅ 密钥从 GitHub raw URL 拉取
+- ✅ 密钥 bytes 仅在内存中
+- ✅ 使用后立即清理
+- ⚠️ 密文必须从磁盘读 (输入文件)
+- ⚠️ 明文可选落盘 (默认不落盘, stdout 输出)
+
+**适用场景**：
+- CI/CD 流水线（避免在镜像中打包密钥）
+- 多端同步（密钥统一从 GitHub 拉）
+- 演示环境（不污染本地文件系统）
