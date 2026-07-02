@@ -1,0 +1,18 @@
+{
+  "created_at": "2026-07-02T02:47:34.036122Z",
+  "version": "LKPV2",
+  "format": "ADR-plan-s-v2",
+  "description": "LKPV2 \u5f00\u53d1\u6001\u5bc6\u94a5\u5957\u4ef6 - Conaeon AI Mac Mini (\u91cd\u5efa 2026-07-02)",
+  "keys": {
+    "offline_root_private": "offline_root_private.pem",
+    "offline_root_public": "offline_root_public.pem",
+    "online_signer_private": "online_signer_private_key.pem",
+    "online_signer_public": "online_signer_public_key.pem",
+    "online_signer_cert": "online_signer_cert.pem",
+    "lease_issuer_private": "lease_issuer_private_key.pem",
+    "lease_issuer_public": "lease_issuer_public_key.pem",
+    "device_private": "device_private_key.pem",
+    "device_public": "device_public_key.pem",
+    "kek": "kek.bin"
+  }
+}
